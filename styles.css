@@ -1,0 +1,388 @@
+/* ===================== RESET ===================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ===================== BODY ===================== */
+  body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #ff9ad5, #ff4da6, #ff66cc);
+    background-size: 300% 300%;
+    animation: fondo 12s ease infinite;
+    color: white;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* FONDO ANIMADO */
+  @keyframes fondo {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  /* LUCES SUAVES */
+  body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background:
+      radial-gradient(circle at 20% 30%, rgba(255,255,255,0.3), transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255,255,255,0.2), transparent 40%),
+      radial-gradient(circle at 50% 50%, rgba(255,255,255,0.1), transparent 50%);
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  /* PARTÍCULAS */
+  body::after {
+    content: "";
+    position: fixed;
+    width: 200%;
+    height: 200%;
+    background-image: radial-gradient(rgba(255,255,255,0.8) 2px, transparent 2px);
+    background-size: 30px 30px;
+    opacity: 0.25;
+    animation: moverParticulas 40s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+  }
+  
+  @keyframes moverParticulas {
+    from { transform: translate(0, 0); }
+    to { transform: translate(-200px, -200px); }
+  }
+  
+  /* ===================== MENÚ ===================== */
+  .menu-btn {
+    font-size: 30px;
+    padding: 15px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 1000;
+    text-shadow: 1px 1px 3px black;
+  }
+  
+  /* SIDEBAR */
+  #sidebar {
+    position: fixed;
+    left: -260px;
+    top: 0;
+    width: 260px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    transition: 0.3s;
+    padding-top: 80px;
+    box-shadow: 5px 0 25px rgba(0,0,0,0.4);
+    z-index: 999;
+  }
+  
+  #sidebar a {
+    display: block;
+    padding: 15px 25px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  #sidebar a:hover {
+    background: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    transform: translateX(5px);
+  }
+  
+  /* ===================== CONTENIDO ===================== */
+  .content {
+    padding: 90px 20px 20px 20px;
+  }
+  
+  /* SECCIONES */
+  section {
+    display: none;
+    animation: aparecer 0.5s ease;
+  }
+  
+  section.active {
+    display: block;
+  }
+  
+  @keyframes aparecer {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* ===================== TEXTO ===================== */
+  h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 
+      -1px -1px 0 black,
+       1px -1px 0 black,
+      -1px  1px 0 black,
+       1px  1px 0 black,
+       0 0 15px rgba(255,255,255,0.6);
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 15px;
+    text-shadow: 1px 1px 3px black;
+  }
+  
+  p {
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  /* ===================== CARTAS ===================== */
+  .carta {
+    background: rgba(255,255,255,0.2);
+    padding: 15px;
+    margin: 15px 0;
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+  }
+  
+  .carta:hover {
+    transform: scale(1.03);
+  }
+  
+  /* ===================== GALERÍA ===================== */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+  }
+  
+  .grid div {
+    text-align: center;
+  }
+  
+  .grid img {
+    width: 100%;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .grid img:hover {
+    transform: scale(1.08);
+  }
+  
+  .grid a {
+    display: inline-block;
+    margin-top: 5px;
+    color: white;
+    font-size: 14px;
+    text-decoration: underline;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  /* ===================== LISTAS ===================== */
+  ul {
+    padding-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 2px black;
+  }
+  
+  /* ===================== CORAZONES ===================== */
+  .hearts {
+    position: absolute; /* 👈 CAMBIA ESTO */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1; /* 👈 súbelo */
+  }
+  
+  .heart {
+    position: absolute;
+    bottom: -20px;
+    width: 16px;
+    height: 16px;
+  
+    background: #ffffff;
+    transform: rotate(45deg);
+    animation: subir linear infinite;
+  
+    opacity: 0.8;
+    box-shadow: 0 0 8px rgba(255,255,255,0.7);
+  
+    pointer-events: auto;
+    cursor: pointer;
+  }
+  
+  /* PARTES DEL CORAZÓN */
+  .heart::before,
+  .heart::after {
+    content: "";
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: #ffffff;
+    border-radius: 50%;
+  }
+  
+  .heart::before {
+    top: -8px;
+    left: 0;
+  }
+  
+  .heart::after {
+    left: -8px;
+    top: 0;
+  }
+  
+  @keyframes subir {
+    0% {
+      transform: translateY(0) rotate(45deg) scale(1);
+      opacity: 0.6;
+    }
+  
+    20% {
+      opacity: 0.8;
+    }
+  
+    40% {
+      transform: translateY(-40vh) rotate(51deg) scale(1.05);
+    }
+  
+    60% {
+      transform: translateY(-60vh) rotate(39deg) scale(1);
+    }
+  
+    80% {
+      transform: translateY(-80vh) rotate(49deg) scale(1.05);
+    }
+  
+    100% {
+      transform: translateY(-100vh) rotate(41deg) scale(1);
+      opacity: 0.3;
+    }
+  }
+  .spark {
+    position: fixed;
+    width: 6px;
+    height: 6px;
+  
+    background: radial-gradient(circle, #fff, #ffb6d9);
+    border-radius: 50%;
+  
+    pointer-events: none;
+    animation: explotar 0.6s ease-out forwards;
+  
+    box-shadow: 0 0 10px rgba(255,182,217,0.8);
+    z-index: 9999;
+  }
+  
+  @keyframes explotar {
+    from {
+      transform: scale(1);
+      opacity: 1;
+    }
+    to {
+      transform: translate(var(--x), var(--y)) scale(0.5);
+      opacity: 0;
+    }
+  }
+  
+  /* ===================== INTRO ===================== */
+  #intro {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9ad5, #ff4da6);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  
+  #intro h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-shadow: 
+      0 0 10px rgba(255,255,255,0.8),
+      1px 1px 3px black;
+    z-index: 2;
+  }
+  
+  #intro button {
+    padding: 12px 25px;
+    border: none;
+    background: white;
+    color: #ff4da6;
+    font-weight: bold;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+    z-index: 2;
+  }
+  
+  #intro button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px white;
+  }
+  .content {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s ease;
+  }
+  
+  .content.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .mensaje {
+    font-size: 18px;
+    margin-top: 15px;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px black;
+    animation: fadeIn 1s ease;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  * {
+    -webkit-tap-highlight-color: transparent;
+  } /*quita el color azul al darle clicks a las cosas*/
+  /* ===================== RESPONSIVE ===================== */
+  @media (max-width: 600px) {
+    .menu-btn {
+      font-size: 25px;
+    }
+  
+    .content {
+      padding: 80px 10px 10px 10px;
+    }
+  }

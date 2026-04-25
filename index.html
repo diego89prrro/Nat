@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Para ti ❤️</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="intro">
+        <div class="hearts"></div>
+        <h1 id="textoIntro"></h1>
+        <button onclick="entrar()">Abrir 💖</button>
+      </div>
+
+<!-- BOTÓN ☰ -->
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<!-- SIDEBAR -->
+<nav id="sidebar">
+  <a onclick="mostrar('inicio')">Inicio</a>
+  <a onclick="mostrar('cartas')">Cartas</a>
+  <a onclick="mostrar('galeria')">Galería</a>
+  <a onclick="mostrar('metas')">Metas</a>
+</nav>
+
+<!-- CONTENIDO -->
+<div class="content">
+    <section id="inicio" class="active">
+
+        <h1>Hola amor 💖</h1>
+      
+        <p class="mensaje">
+          Hice esto para ti… no es mucho, pero es algo que quiero que sea solo nuestro.
+        </p>
+      
+      </section>
+
+  <section id="cartas">
+    <h2>Cartas 💌</h2>
+
+    <div class="carta">
+        <h3>Hoy</h3>
+        <p>
+          No sé cómo explicarlo, pero desde que estás en mi vida todo se siente diferente...
+        </p>
+      </div>
+
+  </section>
+
+  <section id="galeria">
+    <h2>Galería 📸</h2>
+
+    <div class="grid">
+        <div>
+          <img src="img/foto1.jpg">
+          <a href="img/foto1.jpg" download>Descargar</a>
+        </div>
+      
+        <div>
+          <img src="img/foto2.jpg">
+          <a href="img/foto2.jpg" download>Descargar</a>
+        </div>
+      </div>
+
+  </section>
+
+  <section id="metas">
+    <h2>Metas ❤️</h2>
+    <ul>
+      <li>Viajar juntos</li>
+      <li>Cumplir sueños</li>
+    </ul>
+  </section>
+
+</div>
+<div class="hearts"></div>
+<script src="script.js"></script>
+</body>
+</html>
