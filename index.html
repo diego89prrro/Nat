@@ -7,13 +7,18 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="intro">
-        <div class="hearts"></div>
-        <h1 id="textoIntro"></h1>
-        <button onclick="entrar()">Abrir 💖</button>
-      </div>
 
-<!-- BOTÓN ☰ -->
+<!-- INTRO -->
+<div id="intro">
+  <div class="hearts"></div>
+  <h1 id="textoIntro"></h1>
+  <button onclick="entrar()">Abrir 💖</button>
+</div>
+
+<!-- CORAZONES -->
+<div class="hearts" id="hearts-global"></div>
+
+<!-- BOTÓN -->
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
 <!-- SIDEBAR -->
@@ -21,61 +26,247 @@
   <a onclick="mostrar('inicio')">Inicio</a>
   <a onclick="mostrar('cartas')">Cartas</a>
   <a onclick="mostrar('galeria')">Galería</a>
+  <a onclick="mostrar('contador')">Tiempo 💖</a>
   <a onclick="mostrar('metas')">Metas</a>
 </nav>
 
 <!-- CONTENIDO -->
 <div class="content">
-    <section id="inicio" class="active">
 
-        <h1>Hola amor 💖</h1>
-      
-        <p class="mensaje">
-          Hice esto para ti… no es mucho, pero es algo que quiero que sea solo nuestro.
-        </p>
-      
-      </section>
+<!-- INICIO -->
+<section id="inicio" class="active">
+  <h1>Hola Mi vida 💖</h1>
+  <p class="mensaje">
+    Hice esto para ti… no es mucho, pero es algo que quiero que sea solo nuestro.
+  </p>
 
-  <section id="cartas">
-    <h2>Cartas 💌</h2>
+  <center><img src="img/inicio.jpg" class="foto-inicio" onclick="abrirImagen(this)"></center>
+</section>
 
-    <div class="carta">
-        <h3>Hoy</h3>
+<!-- CARTAS -->
+<section id="cartas">
+  <h2>Cartas 💌</h2>
+
+  <div class="contenedor-cartas">
+
+    <div class="carta" onclick="abrirCarta(this)">
+      <h3>Estar contigo... 💖</h3>
+      <div class="tap">Presiona para abrir</div>
+      <div class="contenido">
         <p>
-          No sé cómo explicarlo, pero desde que estás en mi vida todo se siente diferente...
+          No sé en qué momento dejaste de ser solo alguien importante…  
+          y te convertiste en alguien indispensable en mi vida.
+
+          <br><br>
+
+          A veces no digo todo lo que siento,  
+          no porque no quiera, sino porque hay cosas que simplemente se quedan cortas en palabras.
+
+          <br><br>
+
+          Pero si tuviera que intentarlo, te diría esto:
+
+          <br><br>
+
+          Me gusta estar contigo.  
+          Me gusta cómo me haces sentir tranquilo, incluso cuando todo está mal.  
+          Me gusta cómo, sin darte cuenta, haces que los días pesados no se sientan tan difíciles.
+
+          <br><br>
+
+          Contigo no todo es perfecto…  
+          pero es real, y eso vale muchísimo más.
+
+          <br><br>
+
+          Me haces querer ser mejor.  
+          Me haces pensar más, cuidar más, sentir más.  
+          Y eso no lo había vivido así antes.
+
+          <br><br>
+
+          No sé qué venga mañana,  
+          pero sí sé que hoy quiero estar contigo.
+
+          <br><br>
+
+          Quiero seguir conociéndote,  
+          seguir riéndome contigo,  
+          seguir construyendo algo que sea nuestro.
+
+          <br><br>
+
+          Y aunque a veces no lo diga como debería…  
+          te pienso, te valoro, y te quiero muchísimo.
+
+          <br><br>
+
+          Porque más allá de todo…  
+          estar contigo se siente bien.
+
+          <br><br>
+
+          Y eso, para mí, ya significa mucho.
+
+          <br><br>
+
+          Te amo. ❤️
         </p>
       </div>
+    </div>
+    <div class="carta" onclick="abrirCarta(this)">
+      <h3>Seguire Intentando... 💖</h3>
+      <div class="tap">Presiona para abrir</div>
+      <div class="contenido">
+        <p>
+Hay algo que he estado pensando mucho…
 
-  </section>
+<br><br>
 
-  <section id="galeria">
-    <h2>Galería 📸</h2>
+Y es que a veces siento que no hago las cosas como debería.  
+Que sin querer termino arruinando momentos, o diciendo cosas que no ayudan,  
+y eso es algo que de verdad me pesa.
 
-    <div class="grid">
-        <div>
-          <img src="img/foto1.jpg">
-          <a href="img/foto1.jpg" download>Descargar</a>
-        </div>
-      
-        <div>
-          <img src="img/foto2.jpg">
-          <a href="img/foto2.jpg" download>Descargar</a>
-        </div>
+<br><br>
+
+No porque no me importe…  
+sino precisamente porque me importas demasiado.
+
+<br><br>
+
+Me duele saber que a veces puedo ser la razón por la que algo bonito se vuelva complicado,  
+y quiero que sepas que nunca es mi intención hacerte sentir mal.
+
+<br><br>
+
+Si algo tengo claro, es esto:
+
+<br><br>
+
+Te amo.  
+Y cuando amas a alguien, no solo se trata de decirlo,  
+sino de aprender a ser mejor por esa persona.
+
+<br><br>
+
+No soy perfecto, lo sé.  
+Pero estoy intentando… de verdad estoy intentando ser alguien que sume en tu vida,  
+alguien que te haga sentir tranquila, querida y valorada.
+
+<br><br>
+
+Porque eso es lo que mereces.
+
+<br><br>
+
+Mereces cosas bonitas, momentos tranquilos, amor sincero…  
+y alguien que cuide de ti, no que complique las cosas.
+
+<br><br>
+
+Y yo quiero ser esa persona para ti.
+
+<br><br>
+
+Tal vez me equivoque a veces,  
+pero también estoy aquí, intentando mejorar, aprendiendo,  
+y sobre todo… quedándome.
+
+<br><br>
+
+Porque no quiero perderte.  
+Porque te amo, y porque lo que siento por ti es real.
+
+<br><br>
+
+Y si me lo permites,  
+voy a seguir intentando hacer las cosas mejor… por ti, por mí, y por nosotros.
+
+<br><br>
+
+Te amo. ❤️
+</p>
       </div>
+    </div>
 
-  </section>
+  </div>
+</section>
 
-  <section id="metas">
-    <h2>Metas ❤️</h2>
-    <ul>
-      <li>Viajar juntos</li>
-      <li>Cumplir sueños</li>
-      <li>Casarnos y formar una familia</li>
-    </ul>
-  </section>
+<!-- GALERÍA -->
+<section id="galeria">
+  <h2>Galería 📸</h2>
+
+  <div class="grid">
+
+    <div>
+      <img src="img/foto1.jpeg" onclick="abrirImagen(this)">
+      <a href="img/foto1.jpeg" download>Descargar</a>
+    </div>
+
+    <div>
+      <video src="img/video1.mp4" controls></video>
+      <a href="img/video1.mp4" download>Descargar</a>
+    </div>
+
+    <div>
+      <video src="img/video2.mp4" controls></video>
+      <a href="img/video2.mp4" download>Descargar</a>
+    </div>
+
+  </div>
+  <div class="grid">
+
+    <div>
+      <img src="img/foto2.jpeg" onclick="abrirImagen(this)">
+      <a href="img/foto2.jpeg" download>Descargar</a>
+    </div>
+
+    <div>
+      <video src="img/video3.mp4" controls></video>
+      <a href="img/video3.mp4" download>Descargar</a>
+    </div>
+
+    <div>
+      <video src="img/video4.mp4" controls></video>
+      <a href="img/video4.mp4" download>Descargar</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTADOR -->
+<section id="contador">
+  <h2>Nuestro tiempo juntos 💖</h2>
+
+  <div class="contador-box">
+    <div class="tiempo"><span id="dias">0</span><p>Días</p></div>
+    <div class="tiempo"><span id="horas">0</span><p>Horas</p></div>
+    <div class="tiempo"><span id="minutos">0</span><p>Minutos</p></div>
+    <div class="tiempo"><span id="segundos">0</span><p>Segundos</p></div>
+  </div>
+
+  <p id="teamo" class="teamo"></p>
+
+  <img src="img/contador.jpeg" class="foto-contador" onclick="abrirImagen(this)">
+</section>
+
+<!-- METAS -->
+<section id="metas">
+  <h2>Metas ❤️</h2>
+  <ul>
+    <center> <div>
+      <img src="img/image.jpg" onclick="abrirImagen(this)">
+    </div></center>
+  </ul>
+</section>
 
 </div>
-<div class="hearts"></div>
+
+<!-- MODAL -->
+<div id="modal" onclick="cerrarModal()">
+  <img id="imgGrande">
+</div>
+
 <script src="script.js"></script>
 </body>
 </html>
